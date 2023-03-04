@@ -7,26 +7,26 @@ function App() {
       title: "Toilet Paper",
       amount: 94.12,
       date: new Date(2023, 1, 28),
-      location: 'AMAZON',
+      location: "AMAZON",
     },
     {
       id: "e2",
-      title: "news Paper",
+      title: "News Paper",
       amount: 104.12,
       date: new Date(2023, 2, 2),
-      location: 'LOCAL',
+      location: "LOCAL",
     },
     {
       id: "e3",
-      title: "car Insurance",
+      title: "Car Insurance",
       amount: 294.12,
       date: new Date(),
-      location: 'LIC',
+      location: "LIC",
     },
   ];
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <h2>Expense Tracker:</h2>
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
