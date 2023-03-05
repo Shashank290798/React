@@ -1,50 +1,41 @@
-import ExpenseItem from "./components/ExpenseItem";
+import React from 'react';
+import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/Expenses/Expenses';
 
-function App() {
+const App = () => {
   const expenses = [
     {
-      id: "e1",
-      title: "Toilet Paper",
+      id: 'e1',
+      title: 'Toilet Paper',
       amount: 94.12,
-      date: new Date(2023, 1, 28),
-      location: "AMAZON",
+      date: new Date(2020, 7, 14),
+    },
+    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: 'e3',
+      title: 'Car Insurance',
+      amount: 294.67,
+      date: new Date(2021, 2, 28),
     },
     {
-      id: "e2",
-      title: "News Paper",
-      amount: 104.12,
-      date: new Date(2023, 2, 2),
-      location: "LOCAL",
-    },
-    {
-      id: "e3",
-      title: "Car Insurance",
-      amount: 294.12,
-      date: new Date(),
-      location: "LIC",
+      id: 'e4',
+      title: 'New Desk (Wooden)',
+      amount: 450,
+      date: new Date(2021, 5, 12),
     },
   ];
+
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+
   return (
     <div>
-      <h2>Expense Tracker:</h2>
-      <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
-        location={expenses[0].location}
-      />
-      <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-        location={expenses[1].location}
-      />
-      <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
-        location={expenses[2].location}
-      />
+      <NewExpense />
+      <Expenses items={expenses} />
     </div>
   );
 }
